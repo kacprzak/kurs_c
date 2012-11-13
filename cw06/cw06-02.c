@@ -1,4 +1,4 @@
-// cw06-01
+// cw06-02
 #include <stdio.h>
 
 int main(void)
