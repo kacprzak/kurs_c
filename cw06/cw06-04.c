@@ -5,6 +5,7 @@ int main(void)
 {
   puts("Program obliczający pierwiastki równania kwadratowego.");
   
+  // Otowrzenie pliku do odczytu
   FILE *fp = fopen("cw06-04.txt", "r");
   if (fp == NULL) {
     puts("Nie udało się otworzyć pliku!");
@@ -13,6 +14,7 @@ int main(void)
 
   double a, b, c;
 
+  // Odczyt kolejnych wierszy z pliku
   while (fscanf(fp, "%lf %lf %lf", &a, &b, &c) == 3) {
     puts("========================================");
 
@@ -36,6 +38,9 @@ int main(void)
       printf("Równanie ma jedno rozwiązanie:\n x = %.2f\n", x);
     }
   }
+
+  // Zamknięcie pliku
+  fclose(fp);
 
   return 0;
 }
