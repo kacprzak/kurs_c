@@ -1,6 +1,7 @@
 // cw08-03
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 // Deklaracja funkcji
 int rownanie_kwadratowe(double a, double b, double c, double *x1, double *x2);
@@ -55,8 +56,8 @@ int rownanie_kwadratowe(double a, double b, double c, double *x1, double *x2)
   double delta = b*b - 4*a*c;
 
   if (delta > 0) {
-    *x1 = (-b - delta)/(2*a);
-    *x2 = (-b + delta)/(2*a);
+    *x1 = (-b - sqrt(delta))/(2*a);
+    *x2 = (-b + sqrt(delta))/(2*a);
     return 2;
   } else if (delta < 0) {
     return 0;

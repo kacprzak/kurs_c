@@ -1,5 +1,6 @@
 // cw06-02
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
@@ -28,8 +29,8 @@ int main(void)
   double delta = b*b - 4*a*c;
 
   if (delta > 0) {
-    double x1 = (-b - delta)/(2*a);
-    double x2 = (-b + delta)/(2*a);
+    double x1 = (-b - sqrt(delta))/(2*a);
+    double x2 = (-b + sqrt(delta))/(2*a);
     printf("Obliczone pierwiastki to:\n x1 = %.2f, x2 = %.2f\n", x1, x2);
   } else if (delta < 0) {
     puts("Równanie nie posiada rozwiązań");

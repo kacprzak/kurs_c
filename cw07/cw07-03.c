@@ -1,9 +1,11 @@
 // cw07-03
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
   puts("Program obliczający pierwiastki równania kwadratowego.");
+  puts("Wyniki zostaną zapisane w pliku output.txt.");
   
   // Otowrzenie pliku do odczytu
   FILE *fp = fopen("cw07-03.txt", "r");
@@ -30,8 +32,8 @@ int main(void)
     double delta = b*b - 4*a*c;
 
     if (delta > 0) {
-      double x1 = (-b - delta)/(2*a);
-      double x2 = (-b + delta)/(2*a);
+      double x1 = (-b - sqrt(delta))/(2*a);
+      double x2 = (-b + sqrt(delta))/(2*a);
       fprintf(output, "%.2f %.2f\n", x1, x2);
     } else if (delta < 0) {
       // Przy braku rozwiązań wstaw pusty wiersz
