@@ -1,6 +1,5 @@
 // cw07-06
 #include <stdio.h>
-#include <limits.h>
 
 int main(void)
 {
