@@ -1,6 +1,7 @@
 // cw09-02
 #include <stdlib.h> // srand rand
 #include <stdio.h>
+#include <time.h>   // time
 
 int main(void)
 {
