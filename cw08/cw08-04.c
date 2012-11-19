@@ -29,8 +29,8 @@ int main(void)
   // Dla prostoty rezerwuję pamięć na 50 elementową tablicę
   //int tab[50];
 
-  // Tym razem implementacja poprawna umożliwiająca wczytywanie
-  // plików z bardzo dużą ilości liczb
+  // Tym razem implementacja poprawna, umożliwiająca wczytywanie
+  // plików z bardzo dużą ilością liczb
 
   // Sprawdzenie ile liczb uda się wczytać
   int num;
@@ -39,8 +39,6 @@ int main(void)
     size++;
   }
 
-  printf("Wczytano %d liczb z pliku %s.\n", size, filename);
-  
   // Dynamiczna alokacja pamięci na tablicę int'ów o rozmiarze size
   int *tab = malloc(sizeof(int) * size);
   if (tab == NULL) {
@@ -58,6 +56,8 @@ int main(void)
   
   // Można już zamknąć plik
   fclose(fp);
+
+  printf("Wczytano %d liczb z pliku %s.\n", size, filename);
 
   printf("Suma: %d\n", suma(tab, size));
   printf("Średnia arytmetyczna: %f\n", srednia_arytmetyczna(tab, size));
