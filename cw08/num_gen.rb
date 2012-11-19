@@ -6,5 +6,5 @@
 r = Random.new
 
 100.times do
-  puts rand(1..100)
+  puts r.rand(1..100)
 end

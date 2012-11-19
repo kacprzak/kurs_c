@@ -36,7 +36,7 @@ int main(void)
   int num;
   int size = 0;
   while (fscanf(fp, "%d", &num) == 1) {
-    size++;
+    ++size;
   }
 
   // Dynamiczna alokacja pamięci na tablicę int'ów o rozmiarze size
