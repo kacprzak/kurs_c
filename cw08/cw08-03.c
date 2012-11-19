@@ -46,11 +46,13 @@ int main(int argc, char **argv)
   return 0;
 }
 
-// Funkcja obliczająca pierwiastki równania kwardatowego.
-// Współczynniki równania należy przekazać w argumentach a, b i c.
-// Wartości obliczonych pierwiastków zostaną zapisane w zmiennych których
-// adresy są przekazane w argumentach x1 oraz x2.
-// Funkcja zwraca ilość rozwiązań równania: 0, 1 lub 2.
+/** 
+ * Funkcja obliczająca pierwiastki równania kwardatowego.
+ * Współczynniki równania należy przekazać w argumentach a, b i c.
+ * Wartości obliczonych pierwiastków zostaną zapisane w zmiennych których
+ * adresy są przekazane w argumentach x1 oraz x2.
+ * Funkcja zwraca ilość rozwiązań równania: 0, 1 lub 2.
+ */
 int rownanie_kwadratowe(double a, double b, double c, double *x1, double *x2)
 {
   double delta = b*b - 4*a*c;

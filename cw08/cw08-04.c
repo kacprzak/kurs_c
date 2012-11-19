@@ -2,8 +2,9 @@
 
 // Kompilować: gcc cw08-04.c -o cw08-04 -lm
 
+#include <stdlib.h> // malloc
 #include <stdio.h>
-#include <math.h>
+#include <math.h>   // pow
 
 // Obilczanie średniej arytmetycznej i geometrycznej
 // liczb w pliku efektywniej jest wykonać bez zastosowania
@@ -26,13 +27,33 @@ int main(void)
   }
 
   // Dla prostoty rezerwuję pamięć na 50 elementową tablicę
-  int tab[50];
-  
-  // Wczytanie liczb do tablicy
+  //int tab[50];
+
+  // Tym razem implementacja poprawna umożliwiająca wczytywanie
+  // plików z bardzo dużą ilości liczb
+
+  // Sprawdzenie ile liczb uda się wczytać
   int num;
   int size = 0;
-  while (fscanf(fp, "%d", &num) == 1 && size < 50) {
-    tab[size++] = num;
+  while (fscanf(fp, "%d", &num) == 1) {
+    size++;
+  }
+
+  printf("Wczytano %d liczb z pliku %s.\n", size, filename);
+  
+  // Dynamiczna alokacja pamięci na tablicę int'ów o rozmiarze size
+  int *tab = malloc(sizeof(int) * size);
+  if (tab == NULL) {
+    perror("tab");
+  }
+
+  // Przewinięcie pliku do początku
+  rewind(fp);
+
+  // Wczytanie liczb do tablicy
+  int i;
+  for (i = 0; fscanf(fp, "%d", &num) == 1; ++i) {
+    tab[i] = num;
   }
   
   // Można już zamknąć plik
@@ -41,6 +62,9 @@ int main(void)
   printf("Suma: %d\n", suma(tab, size));
   printf("Średnia arytmetyczna: %f\n", srednia_arytmetyczna(tab, size));
   printf("Średnia geometryczna: %f\n", srednia_geometryczna(tab, size));
+
+  // Można już zwolnić pamięć przydzieloną na tablicę int'ów
+  free(tab);
 
   return 0;
 }
