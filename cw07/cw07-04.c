@@ -5,7 +5,7 @@
 int main(void)
 {
   // Nazwa pliku z liczbami
-  const char *filename = "dane";
+  const char *filename = "dane.txt";
   
   FILE *fp = fopen(filename, "r");
   if (fp == NULL) {
@@ -13,8 +13,9 @@ int main(void)
     return -1;
   }
   
-  int num;
+  // Wpisanie do max najmniejszej możliwej wartości dla int
   int max = INT_MIN;
+  int num;
   while (fscanf(fp, "%d", &num) == 1) {
     if (num > max)
       max = num;

@@ -4,7 +4,7 @@
 int main(void)
 {
   // Nazwa pliku z liczbami
-  const char *filename = "dane";
+  const char *filename = "dane.txt";
 
   FILE *fp = fopen(filename, "r");
   if (fp == NULL) {
@@ -12,11 +12,13 @@ int main(void)
     return -1;
   }
 
-  // Dla prostoty rezerwuję pamięć na 50 elementową tablicę
+  // Dla prostoty rezerwuję pamięć na 50 elementową tablicę.
+  // Aby móc wczytywać dowolną ilość elementów należałoby
+  // posłużyć się dynamiczną alokacją pamięci.
   int tab[50];
   
-  int num;
   int size = 0;
+  int num;
   while (fscanf(fp, "%d", &num) == 1 && size < 50) {
     tab[size++] = num;
   }
@@ -35,7 +37,7 @@ int main(void)
   // Dla celów dydaktycznych zamiast qsort zastosowano
   // własną implementację sortowania bąbelkowego
   int j, k;   // indeksy
-  int change; // 1 jeśli wymagana zamiana
+  int change; // 1 jeśli była zamiana
   int tmp;    // zmienna pomocnicza
   
   for (j = 0; j < size - 1; ++j) {
