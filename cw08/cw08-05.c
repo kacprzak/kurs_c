@@ -1,10 +1,8 @@
 // cw08-05
-
-// Kompilować: gcc cw08-05.c -o cw08-05 -lm
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+
+#define PI 3.1415926535897932384626433832795
 
 // Deklaracje funkcji
 double podaj(char *nazwa);
@@ -75,7 +73,7 @@ void pole_kola()
 {
   double r = podaj("r");
 
-  printf("Pole koła wynosi: %f\n", M_PI*r*r);
+  printf("Pole koła wynosi: %f\n", PI*r*r);
 }
 
 void pole_trojkata()

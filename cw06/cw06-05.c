@@ -3,8 +3,7 @@
 
 int main(void)
 {
-  int i;
-  for (i = 1; i < 22; ++i) {
+  for (int i = 1; i < 22; ++i) {
     printf("%d * %d = %d\n", i, i, i*i);
   }
   return 0;

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra
+CFLAGS = -g -Wall -Wextra -std=c99
 
 PROGS = cw08-01 cw08-02 cw08-03 cw08-04 cw08-05
 

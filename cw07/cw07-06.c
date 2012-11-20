@@ -27,8 +27,7 @@ int main(void)
   fclose(fp);
 
   // Wypisanie niepostortowanych elementów tablicy
-  int i;
-  for (i = 0; i < size; ++i) {
+  for (int i = 0; i < size; ++i) {
     printf("%d ", tab[i]);
   }
   printf("\n");
@@ -36,13 +35,12 @@ int main(void)
   // Sortowanie elementów.
   // Dla celów dydaktycznych zamiast qsort zastosowano
   // własną implementację sortowania bąbelkowego
-  int j, k;   // indeksy
   int change; // 1 jeśli była zamiana
   int tmp;    // zmienna pomocnicza
   
-  for (j = 0; j < size - 1; ++j) {
+  for (int i = 0; i < size - 1; ++i) {
     change = 0;
-    for (k = 0; k < size - 1 - j; ++k) {
+    for (int k = 0; k < size - 1 - i; ++k) {
       if (tab[k+1] < tab[k]) { // Porównanie sąsiadujących elementów
         // Zamiana miejscami (swap)
         tmp = tab[k];
@@ -55,23 +53,22 @@ int main(void)
   }
 
   // Wypisanie elementów tablicy rosnąco
-  for (i = 0; i < size; ++i) {
+  for (int i = 0; i < size; ++i) {
     printf("%d ", tab[i]);
   }
   printf("\n");
 
   // Odwrócenie kierunku sortowania (revers)
-  int m;
-  for (m = 0; m < size; ++m) {
-    if (m < size - 1 - m) {
-      tmp = tab[m];
-      tab[m] = tab[size - 1 - m];
-      tab[size - 1 - m] = tmp;
+  for (int i = 0; i < size; ++i) {
+    if (i < size - 1 - i) {
+      tmp = tab[i];
+      tab[i] = tab[size - 1 - i];
+      tab[size - 1 - i] = tmp;
     }
   }
 
   // Wypisanie elementów tablicy malejąco
-  for (i = 0; i < size; ++i) {
+  for (int i = 0; i < size; ++i) {
     printf("%d ", tab[i]);
   }
   printf("\n");

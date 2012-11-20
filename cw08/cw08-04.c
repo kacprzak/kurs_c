@@ -1,7 +1,4 @@
 // cw08-04
-
-// Kompilować: gcc cw08-04.c -o cw08-04 -lm
-
 #include <stdlib.h> // malloc
 #include <stdio.h>
 #include <math.h>   // pow
@@ -49,8 +46,7 @@ int main(void)
   rewind(fp);
 
   // Wczytanie liczb do tablicy
-  int i;
-  for (i = 0; fscanf(fp, "%d", &num) == 1; ++i) {
+  for (int i = 0; fscanf(fp, "%d", &num) == 1; ++i) {
     tab[i] = num;
   }
   
@@ -74,8 +70,7 @@ int main(void)
 int suma(int *tab, int size)
 {
   int result = 0;
-  int i;
-  for (i = 0; i < size; ++i)
+  for (int i = 0; i < size; ++i)
     result += tab[i];
 
   return result;
@@ -91,8 +86,7 @@ double srednia_arytmetyczna(int *tab, int size)
 double srednia_geometryczna(int *tab, int size)
 {
   double result = 1.0;
-  int i;
-  for (i = 0; i < size; ++i)
+  for (int i = 0; i < size; ++i)
     result *= tab[i];
 
   return pow(result, 1.0/size);

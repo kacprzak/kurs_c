@@ -30,9 +30,10 @@ Wersja dla C89:
 Kompilacja programem `make`
 ---------------------------
 
-Aby skopilować wszystkie programy należy wywołać polecenie `make` w
-głównym katalogu repozytorium. Aby skopilować programy tylko z jednego
-ćwiczenia należy wykonać polecenie `make` w katalogu tego ćwiczenia.
+Aby skompilować wszystkie programy, należy wywołać polecenie `make` w
+głównym katalogu repozytorium. Aby skompilować programy tylko z
+jednego ćwiczenia, należy wykonać polecenie `make` w katalogu tego
+ćwiczenia.
 
     cd cw06
     make
