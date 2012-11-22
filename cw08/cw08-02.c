@@ -8,7 +8,7 @@ long long unsigned silnia(int n);
 int main(int argc, char **argv)
 {
   if (argc < 2) {
-    puts("Nie podano argumentu!");
+    puts("Sposób użycia: cw08-02 n");
     return -1;
   }
 

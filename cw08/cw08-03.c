@@ -11,7 +11,7 @@ int main(int argc, char **argv)
   puts("Program obliczający pierwiastki równania kwadratowego.");
 
   if (argc < 4) {
-    puts("Wymagane są trzy argumenty!");
+    puts("Sposób użycia: cw08-03 a b c");
     return -1;
   }
 
@@ -49,8 +49,8 @@ int main(int argc, char **argv)
 /** 
  * Funkcja obliczająca pierwiastki równania kwardatowego.
  * Współczynniki równania należy przekazać w argumentach a, b i c.
- * Wartości obliczonych pierwiastków zostaną zapisane w zmiennych których
- * adresy są przekazane w argumentach x1 oraz x2.
+ * Wartości obliczonych pierwiastków zostaną zapisane w zmiennych, których
+ * adresy zostaną przekazane w argumentach x1 oraz x2.
  * Funkcja zwraca ilość rozwiązań równania: 0, 1 lub 2.
  */
 int rownanie_kwadratowe(double a, double b, double c, double *x1, double *x2)

@@ -17,15 +17,9 @@ int main(int argc, char **argv)
     return -2;
   }
 
-  if (n == 0) {
-    puts("1");
-    return 0;
-  }
-
   long long unsigned result = 1;
-  do {
+  while (n > 1)
     result *= n--;
-  } while (n > 1);
   
   printf("%llu\n", result);
   return 0;

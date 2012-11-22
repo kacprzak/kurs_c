@@ -8,7 +8,7 @@ int main(int argc, char **argv)
   puts("Program obliczający pierwiastki równania kwadratowego.");
 
   if (argc < 4) {
-    puts("Wymagane są trzy argumenty!");
+    puts("Sposób użycia: cw07-02 a b c");
     return -1;
   }
 

@@ -8,7 +8,7 @@ long long unsigned silnia(int n);
 int main(int argc, char **argv)
 {
   if (argc < 2) {
-    puts("Nie podano argumentu!");
+    puts("Sposób użycia: cw08-01 n");
     return -1;
   }
 
@@ -29,13 +29,9 @@ int main(int argc, char **argv)
 // Definicja funkcji
 long long unsigned silnia(int n)
 {
-  if (n==0)
-    return 1;
-
   long long unsigned result = 1;
-  do {
+  while (n > 1)
     result *= n--;
-  } while (n > 1);
 
   return result;
 }

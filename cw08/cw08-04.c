@@ -3,14 +3,15 @@
 #include <stdio.h>
 #include <math.h>   // pow
 
-// Obilczanie średniej arytmetycznej i geometrycznej
-// liczb w pliku efektywniej jest wykonać bez zastosowania
-// tablic, ale skoro takie jest polecenie w zadaniu.
+/* Obilczanie średniej arytmetycznej i geometrycznej
+ * liczb w pliku efektywniej jest wykonać bez zastosowania
+ * tablic, ale skoro takie jest polecenie w zadaniu.
+ */
 
 // Deklaracje funkcji
-int suma(int *tab, int size);
-double srednia_arytmetyczna(int *tab, int size);
-double srednia_geometryczna(int *tab, int size);
+int suma(int tab[], int size);
+double srednia_arytmetyczna(int tab[], int size);
+double srednia_geometryczna(int tab[], int size);
 
 int main(void)
 {
@@ -67,7 +68,7 @@ int main(void)
 
 // tab - wskaźnik na pierwszy element tablicy
 // size - rozmiar tablicy
-int suma(int *tab, int size)
+int suma(int tab[], int size)
 {
   int result = 0;
   for (int i = 0; i < size; ++i)
@@ -76,14 +77,14 @@ int suma(int *tab, int size)
   return result;
 }
 
-double srednia_arytmetyczna(int *tab, int size)
+double srednia_arytmetyczna(int tab[], int size)
 {
   // Konieczne jest rzutowanie size na double
   // aby uniknąć dzielenia całkowitoliczbowego.
   return suma(tab, size) / (double)size;
 }
 
-double srednia_geometryczna(int *tab, int size)
+double srednia_geometryczna(int tab[], int size)
 {
   double result = 1.0;
   for (int i = 0; i < size; ++i)
