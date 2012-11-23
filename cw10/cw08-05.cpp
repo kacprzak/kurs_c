@@ -9,7 +9,7 @@
 using namespace std;
 
 // Deklaracje funkcji
-double podaj(const string& nazwa, const string& zacheta = "Podaj ");
+double podaj(const string& zacheta = "> ");
 void pole_prostokata();
 void pole_kola();
 void pole_trojkata();
@@ -27,7 +27,7 @@ int main(void)
          << "  3. Pole trójkąta" << endl
          << "  4. Chcę wyjść z programu" << endl;
 
-    option = podaj("", "");
+    option = podaj();
 
     switch (option) {
     case 1:
@@ -50,15 +50,20 @@ int main(void)
   return 0;
 }
 
-// Bardziej zaawansowane wypytywanie użytkownika o dane.
-// Odpytuje aż użytkownik poda liczbę większą od zera.
-double podaj(const string& nazwa, const string& zacheta)
+/**
+ * Odpytuje aż użytkownik poda liczbę większą od zera.
+ *
+ * @param zacheta  napis wyświetlany przed polem w którym użytkownik
+ *                 może wprowadzać znaki. Domyślnie "> " 
+ * @returns        podaną przez użytkowniak liczbę
+ */
+double podaj(const string& zacheta)
 {
   double wartosc;
   bool error;
   do {
     error = false;
-    cout << zacheta << nazwa << ": ";
+    cout << zacheta;
     cin >> wartosc;
 
     if (cin.fail()) {
@@ -79,23 +84,23 @@ double podaj(const string& nazwa, const string& zacheta)
 
 void pole_prostokata()
 {
-  double a = podaj("a");
-  double b = podaj("b");
+  double a = podaj("Podaj a: ");
+  double b = podaj("Podaj b: ");
 
   cout << "Pole prostokąta wynosi: " << a*b << endl;
 }
 
 void pole_kola()
 {
-  double r = podaj("r");
+  double r = podaj("Podaj r: ");
 
   cout << "Pole koła wynosi: " << PI*r*r << endl;
 }
 
 void pole_trojkata()
 {
-  double a = podaj("a");
-  double h = podaj("h");
+  double a = podaj("Podaj a: ");
+  double h = podaj("Podaj h: ");
 
   cout << "Pole trójkąta wynosi: " << 0.5*a*h << endl;  
 }
