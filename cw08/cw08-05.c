@@ -13,7 +13,7 @@ void pole_trojkata();
 int main(void)
 {
   while (1) {
-    int option;
+    char selection = '\n';
 
     puts("");
     puts("Siemanko. Co chcesz obliczyć?");
@@ -23,19 +23,20 @@ int main(void)
     puts("  4. Chcę wyjść z programu");
 
     printf("> ");
-    scanf(" %d", &option);
+    while (selection == '\n')
+      scanf("%c", &selection);
 
-    switch (option) {
-    case 1:
+    switch (selection) {
+    case '1':
       pole_prostokata();
       break;
-    case 2:
+    case '2':
       pole_kola();
       break;
-    case 3:
+    case '3':
       pole_trojkata();
       break;
-    case 4:
+    case '4':
       puts("Do zobaczyska!");
       exit(0); // Wyjście z programu
     default:
@@ -54,7 +55,7 @@ double podaj(char *nazwa)
   double wartosc;
   do {
     printf("Podaj %s: ", nazwa);
-    poprawnie_odczytane = scanf(" %lf", &wartosc);
+    poprawnie_odczytane = scanf("%lf", &wartosc);
     getchar(); // Zjada enter
   } while (poprawnie_odczytane != 1 || wartosc <= 0);
 
