@@ -55,7 +55,7 @@ int main(void)
  *
  * @param zacheta  napis wyświetlany przed polem w którym użytkownik
  *                 może wprowadzać znaki. Domyślnie "> " 
- * @returns        podaną przez użytkowniak liczbę
+ * @returns        podaną przez użytkownika liczbę
  */
 double podaj(const string& zacheta)
 {
