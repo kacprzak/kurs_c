@@ -21,10 +21,10 @@ int main(void)
     int option;
 
     cout << endl
-         << "Siemanko. Co chcesz obliczyć?" << endl
-         << "  1. Pole prostokąta" << endl
-         << "  2. Pole koła" << endl
-         << "  3. Pole trójkąta" << endl
+         << "Siemanko. Co chcesz obliczyć?\n"
+         << "  1. Pole prostokąta\n"
+         << "  2. Pole koła\n"
+         << "  3. Pole trójkąta\n"
          << "  4. Chcę wyjść z programu" << endl;
 
     option = podaj();
