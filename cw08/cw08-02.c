@@ -5,7 +5,7 @@
 // Deklaracja funkcji
 long long unsigned silnia(int n);
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
   if (argc < 2) {
     puts("Sposób użycia: cw08-02 n");
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 // Definicja funkcji
 long long unsigned silnia(int n)
 {
-  if (n==0)
+  if (n <= 1)
     return 1;
   else
     return n * silnia(n-1);

@@ -1,12 +1,12 @@
 // cw08-03
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#include <stdlib.h> // atof
+#include <stdio.h>  // printf puts
+#include <math.h>   // sqrt
 
 // Deklaracja funkcji
 int rownanie_kwadratowe(double a, double b, double c, double *x1, double *x2);
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
   puts("Program obliczający pierwiastki równania kwadratowego.");
 

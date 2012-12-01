@@ -1,6 +1,6 @@
 // cw08-04
-#include <stdlib.h> // malloc
-#include <stdio.h>
+#include <stdlib.h> // malloc free
+#include <stdio.h>  // printf fscanf fopen fclose perror rewind
 #include <math.h>   // pow
 
 /* Obilczanie średniej arytmetycznej i geometrycznej

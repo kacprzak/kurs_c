@@ -1,11 +1,11 @@
 // cw08-01
-#include <stdlib.h>
-#include <stdio.h>
+#include <stdlib.h> // atoi
+#include <stdio.h>  // printf puts
 
 // Deklaracja funkcji
 long long unsigned silnia(int n);
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
   if (argc < 2) {
     puts("Sposób użycia: cw08-01 n");

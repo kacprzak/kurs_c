@@ -1,6 +1,6 @@
 // cw08-05
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>  // puts scanf printf getchar
+#include <stdlib.h> // exit
 
 #define PI 3.1415926535897932384626433832795
 
@@ -12,7 +12,8 @@ void pole_trojkata();
 
 int main(void)
 {
-  while (1) {
+  // Pętla nieskończona
+  for (;;) {
     char selection = '\n';
 
     puts("");
@@ -44,6 +45,7 @@ int main(void)
       break;
     }
   }
+  // Tu nigdy nie dojdzie!
   return 0;
 }
 
